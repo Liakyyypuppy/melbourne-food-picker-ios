@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🐾沃特喵吃吃吃🐾</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <div class="paw-bg paw-1">🐾汪</div>
+  <div class="paw-bg paw-2">🐾</div>
+  <div class="paw-bg paw-3">🐶🐾</div>
+
+  <header class="hero">
+    <div class="hero-badge">Scape Peel · UniMelb Parkville · Carlton · QVM</div>
+    <h1>今天 Sofie 吃什么？</h1>
+    <p class="subtitle">
+      从 Scape Peel 出发，覆盖墨大 Parkville、Queen Victoria Market、Carlton / Lygon Street 和 Melbourne Central 北侧。
+      选择困难的时候，交给旺仔随机推荐美食。
+    </p>
+
+    <div class="dog-card">
+      <div class="dog-avatar">🐩</div>
+      <div>
+        <strong>旺仔今日任务：</strong>
+        <span id="dogLine">今天想出去吃啥子？</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <button id="mainPickBtn" class="primary-btn">随机推荐一个</button>
+      <button id="dogPickBtn" class="secondary-btn">让旺仔帮忙选</button>
+      <button id="resetBtn" class="ghost-btn">清空筛选</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="section-title">
+        <span>01</span>
+        <h2>今天想吃哪一类？</h2>
+      </div>
+      <div class="chips" id="filterChips">
+        <button class="chip active" data-filter="all">都可以</button>
+        <button class="chip" data-filter="spicy">想吃辣</button>
+        <button class="chip" data-filter="chinese">中餐/亚洲菜</button>
+        <button class="chip" data-filter="italian">意餐</button>
+        <button class="chip" data-filter="dessert">甜品/甜咸</button>
+        <button class="chip" data-filter="brunch">早午餐/咖啡</button>
+        <button class="chip" data-filter="quick">赶时间</button>
+        <button class="chip" data-filter="campus">不想出校</button>
+        <button class="chip" data-filter="qvm">Queen Vic Market</button>
+        <button class="chip" data-filter="date">适合拍照/约饭</button>
+        <button class="chip" data-filter="budget">学生友好</button>
+      </div>
+    </section>
+
+    <section class="result-wrap">
+      <div class="card result-card" id="resultCard">
+        <div class="placeholder">
+          <p class="mini-title">今日推荐还没生成</p>
+          <h2>点一下，替你决定。</h2>
+          <p>建议玩法：先选状态，再点“随机推荐一个”。</p>
+        </div>
+      </div>
+
+      <aside class="card side-card">
+        <div class="side-dog">🐩</div>
+        <p class="mini-title">旺仔提示</p>
+        <ul>
+          <li>如果赶时间，优先选校内或 QVM 附近。</li>
+          <li>想吃辣，优先看韩餐、泰餐、川菜/湘菜、亚洲融合。</li>
+          <li>想拍照或慢慢吃，优先看 Carlton / Lygon Street。</li>
+          <li>菜单和营业时间会变，出门前再查一次地图更稳。</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <span>02</span>
+        <h2>餐厅候选池</h2>
+      </div>
+      <div class="restaurant-grid" id="restaurantGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tailored for Sun Feiyu's decision-making moments · 🐾</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
