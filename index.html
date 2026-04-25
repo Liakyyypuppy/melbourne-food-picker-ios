@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🐾沃特喵吃吃吃🐾</title>
+  <title>沃特喵吃吃吃</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 <body>
-  <div class="paw-bg paw-1">🐾汪</div>
+  <div class="paw-bg paw-1">🐾</div>
   <div class="paw-bg paw-2">🐾</div>
   <div class="paw-bg paw-3">🐩🐾</div>
 
@@ -15,21 +17,21 @@
     <div class="hero-badge">Scape Peel · UniMelb Parkville · Carlton · QVM</div>
     <h1>今天 Sofie 吃什么？</h1>
     <p class="subtitle">
-      从 Scape Peel 出发，覆盖墨大 Parkville、Queen Victoria Market、Carlton / Lygon Street 和 Melbourne Central 北侧。
-      选择困难的时候，交给旺仔随机推荐美食。
+      选择困难？交给旺仔随机推荐美食
     </p>
 
     <div class="dog-card">
       <div class="dog-avatar">🐩</div>
       <div>
-        <strong>旺仔今日任务：</strong>
-        <span id="dogLine">今天想出去吃啥子？</span>
+        <strong>Puppy Whisper：</strong>
+        <!-- <span id="dogLine">于是有人喊了一句「觉得小狗可爱的请举手」，然后世界变成了一个刺猬。</span> -->
+        <span id="dogLine" style=" color: #d85b3f;; font-weight: bold;">于是有人喊了一句「觉得小狗可爱的请举手」，然后世界变成了一个刺猬。</span>
       </div>
     </div>
 
     <div class="hero-actions">
-      <button id="mainPickBtn" class="primary-btn">随机推荐一个</button>
-      <button id="dogPickBtn" class="secondary-btn">让旺仔帮忙选</button>
+      <button id="mainPickBtn" class="primary-btn">随机推荐</button>
+      <button id="dogPickBtn" class="secondary-btn">听旺仔说</button>
       <button id="resetBtn" class="ghost-btn">清空重选</button>
     </div>
   </header>
@@ -60,15 +62,15 @@
         <div class="placeholder">
           <p class="mini-title">今日推荐还没生成</p>
           <h2>点一下，替你决定。</h2>
-          <p>建议玩法：先选状态，再点“随机推荐一个”。</p>
+          <p>建议玩法：先选状态，再点“随机推荐”。</p>
         </div>
       </div>
 
       <aside class="card side-card">
         <div class="side-dog">🐩</div>
-        <p class="mini-title">Puppy Whisper</p>
+        <p class="mini-title">旺仔温馨提示</p>
         <ul>
-          <li>如果赶时间，优先选校内或 QVM 附近。</li>
+          <li>赶时间优先选校内或 QVM 附近。</li>
           <li>想吃辣，优先看韩餐、泰餐、川菜/湘菜、亚洲融合。</li>
           <li>想拍照或慢慢吃，优先看 Carlton / Lygon Street。</li>
           <li>菜单和营业时间会变，出门前再查一次地图更稳。</li>
@@ -76,7 +78,7 @@
       </aside>
     </section>
 
-    <section class="panel" id="restaurantPanel">
+    <section class="panel">
       <div class="section-title">
         <span>02</span>
         <h2>餐厅候选池</h2>

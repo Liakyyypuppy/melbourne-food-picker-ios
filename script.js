@@ -1,10 +1,10 @@
 const restaurants = [
   {
     "name": "Campus Canteen",
-    "category": "校内省钱快吃",
+    "category": "校内快吃",
     "area": "University of Melbourne Parkville · 201 Grattan St",
     "special": "当日热餐、学生价主食、米饭类套餐",
-    "reason": "从 Scape Peel 到学校后，如果不想走远，这是低决策成本选项。适合赶课、赶作业、想省钱。",
+    "reason": "不想走远，这是低决策成本选项。适合赶课、赶作业。",
     "order": "看当天 rotating meals，优先选带主菜和米饭的热餐。",
     "tags": [
       "campus",
@@ -18,7 +18,7 @@ const restaurants = [
     "category": "校内中餐/亚洲菜",
     "area": "Eastern Resource Centre, University of Melbourne Parkville",
     "special": "饺子、馄饨、点心、面食、炒菜/盖饭类",
-    "reason": "真实在墨大校内，适合想吃中餐但不想出校的一天。",
+    "reason": "墨大校内，适合想吃中餐但不想出校的一天。",
     "order": "饺子、馄饨或一份主食类中餐。",
     "tags": [
       "campus",
@@ -33,7 +33,7 @@ const restaurants = [
     "category": "校内轻食/饺子",
     "area": "Melbourne Dental Clinic, 723 Swanston St, Carlton",
     "special": "饺子、冷饮、甜食、素食选择",
-    "reason": "墨大官方列出的 Parkville 校区餐饮点，适合上课日快速解决。",
+    "reason": "校内餐饮点，适合上课日快速解决。",
     "order": "饺子 + 冷饮，或者当天甜食。",
     "tags": [
       "campus",
@@ -77,7 +77,7 @@ const restaurants = [
     "category": "咖啡/贝果",
     "area": "757 Swanston St, University of Melbourne",
     "special": "咖啡、bagel、轻食",
-    "reason": "墨大地图上可查的咖啡与 bagel bar，适合早午餐或课前带走。",
+    "reason": "适合早午餐或课前带走。",
     "order": "Bagel + coffee。",
     "tags": [
       "campus",
@@ -107,7 +107,7 @@ const restaurants = [
     "area": "303 Lygon St, Carlton",
     "special": "意面、lasagna、risotto、arancini",
     "reason": "Carlton 老牌意餐，适合不想踩雷的一顿 Lygon Street 晚饭。",
-    "order": "Lasagna 或一份 pasta，适合和姐姐/朋友一起去。",
+    "order": "Lasagna 或一份 pasta，适合聚会。",
     "tags": [
       "italian",
       "date",
@@ -174,7 +174,7 @@ const restaurants = [
     "category": "韩式辣味",
     "area": "Lygon St, Carlton",
     "special": "Army hotpot、spicy chicken feet、韩式下酒菜",
-    "reason": "她喜欢辣，这家适合想吃热闹、重口、韩式辣味的一晚。",
+    "reason": "这家适合想吃热闹、重口、韩式辣味的一晚。",
     "order": "Army hotpot 或 spicy chicken feet。",
     "tags": [
       "spicy",
@@ -253,7 +253,7 @@ const restaurants = [
     "category": "Queen Vic Market 小吃",
     "area": "Queen Victoria Market",
     "special": "Spicy lamb borek、cheese & spinach borek",
-    "reason": "从 Scape Peel 去 Queen Vic Market 很顺路，适合便宜、快、热乎的小吃。",
+    "reason": "从 Scape Peel 去 Queen Vic Market 很顺路，适合快、热乎的小吃。",
     "order": "Spicy lamb borek。",
     "tags": [
       "qvm",
@@ -261,7 +261,7 @@ const restaurants = [
       "budget",
       "spicy"
     ],
-    "vibe": "市场小吃、便宜、热乎"
+    "vibe": "市场小吃、热乎"
   },
   {
     "name": "The Bratwurst Shop & Co",
@@ -351,7 +351,7 @@ const restaurants = [
     "category": "日式拉面",
     "area": "225 Russell St, Melbourne",
     "special": "豚骨拉面、黑蒜油拉面、煎饺",
-    "reason": "如果她愿意往 Melbourne Central / CBD 方向走，想吃热汤面时很合适。",
+    "reason": "想吃热汤面时很合适。",
     "order": "Tonkotsu ramen 或 black ramen + gyoza。",
     "tags": [
       "quick",
@@ -369,12 +369,43 @@ const grid = document.getElementById("restaurantGrid");
 const chips = document.querySelectorAll(".chip");
 const dogLine = document.getElementById("dogLine");
 
+// const dogLines = [
+//   "旺仔闻了闻地图，决定这家可以~",
+//   "旺仔说：这家听起来比较香，嘻嘻",
+//   "旺仔表示：不要纠结，就吃这个！！！",
+//   "旺仔今日推荐已生成，尾巴正在摇摇摇",
+//   "旺仔认为：这顿饭可以进入候选清单。"
+// ];
 const dogLines = [
-  "旺仔闻了闻地图，决定这家可以~",
-  "旺仔说：这家听起来比较香，嘻嘻",
-  "旺仔表示：不要纠结，就吃这个！！！",
-  "旺仔今日推荐已生成，尾巴正在摇摇摇",
-  "旺仔认为：这顿饭可以进入候选清单。"
+  "于是有人喊了一句「觉得小狗可爱的请举手」，然后世界变成了一个刺猬。",
+  "我是饺子型人格，吃点醋怎么了≧∇≦！",
+  "任何人来干扰我做事，我都会停下和他玩一会。",
+  "如果你看扁我，我就扁扁地走开。",
+  "如果你小瞧我，我就小小地走开。",
+  "如果你惹毛我，我就毛茸茸地走开。",
+  "如果你惹急我，我就急急地走开。",
+  "如果你惹火了我，我就变得火辣辣。",
+  "如果你打倒了我，我就躺下来睡大觉。",
+  "装可爱好难，但幸好，我是真的爱装๑> <๑",
+  "我这一生如绿豆冰。",
+  "我常常毫无原因的犒劳自己。",
+  "好汉不提当年勇，但提拉米苏。",
+  "《你要吃出什么样的人生》",
+  "我真是披萨心肠的一个人。",
+  "很内向，吃饱了也不说，一直吃。",
+  "一年四季：春肥、夏胖、秋膘、冬圆。",
+  "人生得意须尽吃，不然空腹站不直。",
+  "半夜肚子痛赶紧去医院，急诊医生诊断出「我饿了」。",
+  "我也不懂啊，腿累进来坐坐，一坐下来就给我上菜了。",
+  "没有人会一直喜欢你，除非你是意大利经典香浓芝士肉酱千层面。",
+  "眼泪要是能变成泡芙就好了，每掉一颗眼泪就变成一个泡芙，这样就算一直流眼泪，后知后觉就会发现自己被泡芙包围了。",
+  "命运就算冰糖雪梨，命运就算黄油曲奇，命运就算教会你我做人要美味。白天吃汉堡，晚上吃炸鸡，我愿我一生相伴土豆泥。",
+  "做生活的嚼嚼者。",
+  "我的嘴巴一直在下雨，我处理不好。",
+  "我不能为你上天揽月，但可以为你下海底捞夹肥牛、毛肚、虾滑、黄喉、鸭掌。",
+  "宝宝吃菌菇的时候一定要小心，尤其是十年后，因为菌子报仇十年不晚。",
+  "鱿鱼总会败北。",
+  "小腹三层，非一日之馋。"
 ];
 
 function pickRestaurant(byDog = false) {
@@ -451,26 +482,14 @@ document.getElementById("resetBtn").addEventListener("click", () => {
   currentFilter = "all";
   chips.forEach(c => c.classList.remove("active"));
   document.querySelector('[data-filter="all"]').classList.add("active");
-  dogLine.innerText = "今天吃啥子";
+  dogLine.innerText = "没满意的？重新选叭";
   resultCard.innerHTML = `
     <div class="placeholder">
       <p class="mini-title">今日推荐还没生成</p>
       <h2>点一下，替你决定。</h2>
-      <p>建议玩法：先选状态，再点“随机推荐一个”。</p>
+      <p>tips：先挑选想吃的类型，再点击「随机推荐」就好啦～</p>
     </div>
   `;
 });
 
 renderGrid();
-
-
-// --- Puppy Whisper functionality ---
-document.querySelectorAll('.side-dog').forEach(elem => {
-    elem.addEventListener('click', () => {
-        document.getElementById('restaurantPanel').scrollIntoView({ behavior: 'smooth' });
-        const phrases = ['于是有人喊了一句 “觉得小狗可爱的请举手”，然后世界变成了一个刺猬。', '我是饺子型人格，吃点醋怎么了≧∇≦！', '任何人来干扰我做事，我都会停下和他玩一会。', '如果你看扁我，我就扁扁地走开。', '如果你小瞧我，我就小小地走开。', '如果你惹毛我，我就毛茸茸地走开。', '如果你惹急我，我就急急地走开。', '如果你惹火了我，我就变得火辣辣。', '如果你打倒了我，我就躺下来睡大觉。', '装可爱好难，但幸好，我是真的爱装๑> <๑', '我这一生如绿豆冰。', '我常常毫无原因的犒劳自己。', '好汉不提当年勇，但提拉米苏。', '《你要吃出什么样的人生》', '我真是披萨心肠的一个人。', '很内向，吃饱了也不说，一直吃。', '一年四季：春肥、夏胖、秋膘、冬圆。', '人生得意须尽吃，不然空腹站不直。', '半夜肚子痛赶紧去医院，急诊医生诊断出「我饿了」。', '我也不懂啊，腿累进来坐坐，一坐下来就给我上菜了。', '没有人会一直喜欢你，除非你是意大利经典香浓芝士肉酱千层面。', '眼泪要是能变成泡芙就好了，每掉一颗眼泪就变成一个泡芙，这样就算一直流眼泪，后知后觉就会发现自己被泡芙包围了。', '命运就算冰糖雪梨，命运就算黄油曲奇，命运就算教会你我做人要美味。白天吃汉堡，晚上吃炸鸡，我愿我一生相伴土豆泥。', '做生活的嚼嚼者。', '我的嘴巴一直在下雨，我处理不好。', '我不能为你上天揽月，但可以为你下海底捞夹肥牛、毛肚、虾滑、黄喉、鸭掌。', '宝宝吃菌菇的时候一定要小心，尤其是十年后，因为菌子报仇十年不晚。', '鱿鱼总会败北。', '小腹三层，非一日之馋。'];
-        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-        const lineElem = document.getElementById('dogLine');
-        lineElem.textContent = phrase;
-    });
-});
