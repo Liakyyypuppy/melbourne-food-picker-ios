@@ -462,3 +462,15 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 });
 
 renderGrid();
+
+
+// --- Puppy Whisper functionality ---
+document.querySelectorAll('.side-dog').forEach(elem => {
+    elem.addEventListener('click', () => {
+        document.getElementById('restaurantPanel').scrollIntoView({ behavior: 'smooth' });
+        const phrases = ['于是有人喊了一句 “觉得小狗可爱的请举手”，然后世界变成了一个刺猬。', '我是饺子型人格，吃点醋怎么了≧∇≦！', '任何人来干扰我做事，我都会停下和他玩一会。', '如果你看扁我，我就扁扁地走开。', '如果你小瞧我，我就小小地走开。', '如果你惹毛我，我就毛茸茸地走开。', '如果你惹急我，我就急急地走开。', '如果你惹火了我，我就变得火辣辣。', '如果你打倒了我，我就躺下来睡大觉。', '装可爱好难，但幸好，我是真的爱装๑> <๑', '我这一生如绿豆冰。', '我常常毫无原因的犒劳自己。', '好汉不提当年勇，但提拉米苏。', '《你要吃出什么样的人生》', '我真是披萨心肠的一个人。', '很内向，吃饱了也不说，一直吃。', '一年四季：春肥、夏胖、秋膘、冬圆。', '人生得意须尽吃，不然空腹站不直。', '半夜肚子痛赶紧去医院，急诊医生诊断出「我饿了」。', '我也不懂啊，腿累进来坐坐，一坐下来就给我上菜了。', '没有人会一直喜欢你，除非你是意大利经典香浓芝士肉酱千层面。', '眼泪要是能变成泡芙就好了，每掉一颗眼泪就变成一个泡芙，这样就算一直流眼泪，后知后觉就会发现自己被泡芙包围了。', '命运就算冰糖雪梨，命运就算黄油曲奇，命运就算教会你我做人要美味。白天吃汉堡，晚上吃炸鸡，我愿我一生相伴土豆泥。', '做生活的嚼嚼者。', '我的嘴巴一直在下雨，我处理不好。', '我不能为你上天揽月，但可以为你下海底捞夹肥牛、毛肚、虾滑、黄喉、鸭掌。', '宝宝吃菌菇的时候一定要小心，尤其是十年后，因为菌子报仇十年不晚。', '鱿鱼总会败北。', '小腹三层，非一日之馋。'];
+        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+        const lineElem = document.getElementById('dogLine');
+        lineElem.textContent = phrase;
+    });
+});

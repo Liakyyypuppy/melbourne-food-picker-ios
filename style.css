@@ -383,27 +383,12 @@ footer {
   }
 }
 
-/* Mobile optimization for iPhone */
-button, .chip {
-    font-size: 18px !important;
-    padding: 16px 28px !important;
+/* Improved navbar and background */
+.nav-bar {
+    background: linear-gradient(135deg, #ffe4ed, #fff0f5);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ffccd9;
 }
-.hero h1 {
-    font-size: clamp(36px, 8vw, 72px) !important;
-}
-.hero .subtitle {
-    font-size: 18px !important;
-}
-.result-card {
-    min-height: 420px !important;
-}
-.restaurant-card h3 {
-    font-size: 18px !important;
-}
-@media (max-width: 600px) {
-    h1 { font-size: 28px !important; }
-    .hero .subtitle { font-size: 16px !important; }
-    .chip { font-size: 16px !important; padding: 14px 20px !important; }
-    .result-card { min-height: 360px !important; }
-    .restaurant-card h3 { font-size: 16px !important; }
+body {
+    background: linear-gradient(160deg, #ffe4ed 0%, #fff0f5 100%);
 }
